@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Notevo – L'application de référence pour calculer ses moyennes scolaires selon les coefficients officiels de Côte d'Ivoire. Gratuit et hors ligne."/>
+  <meta name="keywords" content="notevo, notes scolaires, moyennes CI, coefficients MENET-FP, Côte d'Ivoire, élèves"/>
+  <meta property="og:title" content="Notevo – Cahier de notes scolaires · Côte d'Ivoire"/>
+  <meta property="og:description" content="Calcule tes moyennes avec les coefficients officiels CI. Du collège à la terminale. Gratuit et hors ligne."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://notevo.app"/>
+  <meta name="theme-color" content="#C0461A"/>
+  <title>Notevo – Cahier de notes scolaires · Côte d'Ivoire</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Caveat:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --paper: #F7F3EC;
+      --cover: #1C2B3A;
+      --accent: #C0461A;
+      --accent-d: #962E0C;
+      --accent-l: #F9EDE7;
+      --ink: #14110C;
+      --ink-b: #2C2820;
+      --ink-m: #68635A;
+      --ink-f: #A09890;
+      --edge: #D8D2C8;
+      --ok: #1E5C36;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Nunito', sans-serif; background: var(--cover); color: var(--ink); -webkit-font-smoothing: antialiased; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--cover);
+      padding: 80px 24px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: repeating-linear-gradient(to bottom, transparent 0px, transparent 35px, rgba(255,255,255,.025) 35px, rgba(255,255,255,.025) 36px);
+      pointer-events: none;
+    }
+    .hero-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .hero-icon {
+      width: 72px; height: 72px;
+      background: var(--accent);
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 4px 4px 0 var(--accent-d), 0 12px 40px rgba(192,70,26,.35);
+    }
+    .hero-icon span {
+      font-family: Georgia, serif;
+      font-size: 38px; font-weight: 700;
+      color: white; line-height: 1;
+    }
+    .hero-wordmark {
+      font-family: 'Caveat', cursive;
+      font-size: 52px; font-weight: 700;
+      color: white; line-height: 1;
+      letter-spacing: -1px;
+    }
+    .hero-wordmark em { color: var(--accent); font-style: normal; }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 900; color: white;
+      line-height: 1.2; margin-bottom: 16px;
+      max-width: 600px; margin-left: auto; margin-right: auto;
+    }
+    .hero p {
+      font-size: 17px; font-weight: 600;
+      color: rgba(255,255,255,.45);
+      max-width: 480px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+    .cta-group {
+      display: flex; gap: 12px;
+      justify-content: center; flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(145deg, var(--accent), var(--accent-d));
+      color: white; text-decoration: none;
+      font-weight: 900; font-size: 15px;
+      padding: 14px 28px; border-radius: 10px;
+      box-shadow: 0 4px 0 var(--accent-d), 0 8px 24px rgba(192,70,26,.3);
+      transition: transform .1s, box-shadow .1s;
+    }
+    .btn-primary:hover { transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.08);
+      border: 1.5px solid rgba(255,255,255,.15);
+      color: rgba(255,255,255,.7); text-decoration: none;
+      font-weight: 800; font-size: 14px;
+      padding: 13px 24px; border-radius: 10px;
+    }
+    .badge-free {
+      display: inline-block;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.1);
+      color: rgba(255,255,255,.35);
+      font-size: 12px; font-weight: 700;
+      padding: 5px 14px; border-radius: 20px;
+    }
+
+    /* ── FEATURES ── */
+    .features { background: var(--paper); padding: 60px 24px; }
+    .features-inner { max-width: 900px; margin: 0 auto; }
+    .section-label {
+      text-align: center;
+      font-size: 11px; font-weight: 900;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--ink-f); margin-bottom: 12px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: clamp(24px, 4vw, 36px); font-weight: 900;
+      color: var(--ink); margin-bottom: 48px;
+      line-height: 1.2;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .feature-card {
+      background: white;
+      border-radius: 2px 14px 14px 2px;
+      border-left: 3px solid var(--accent);
+      padding: 24px;
+      box-shadow: 1px 2px 12px rgba(0,0,0,.06);
+      position: relative; overflow: hidden;
+    }
+    .feature-card::before {
+      content: '';
+      position: absolute; left: 32px; top: 0; bottom: 0; width: 1px;
+      background: rgba(180,80,40,.08);
+    }
+    .feature-icon {
+      width: 44px; height: 44px;
+      background: var(--accent-l);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; margin-bottom: 16px;
+    }
+    .feature-card h3 { font-size: 15px; font-weight: 900; color: var(--ink); margin-bottom: 8px; }
+    .feature-card p { font-size: 13px; font-weight: 600; color: var(--ink-m); line-height: 1.7; }
+    .feature-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent), var(--accent-d));
+      color: white;
+      font-size: 9px; font-weight: 900;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: 2px 8px; border-radius: 3px;
+      margin-bottom: 10px;
+    }
+
+    /* ── NIVEAUX ── */
+    .levels { background: var(--cover); padding: 60px 24px; }
+    .levels-inner { max-width: 900px; margin: 0 auto; }
+    .levels .section-label { color: rgba(255,255,255,.3); }
+    .levels .section-title { color: white; }
+    .levels-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+    }
+    .level-group {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 10px; padding: 16px;
+    }
+    .level-group h4 {
+      font-size: 9px; font-weight: 900;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: rgba(255,255,255,.3); margin-bottom: 10px;
+    }
+    .level-group ul { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+    .level-group ul li {
+      background: rgba(255,255,255,.08);
+      color: rgba(255,255,255,.65);
+      font-size: 12px; font-weight: 800;
+      padding: 4px 10px; border-radius: 5px;
+    }
+
+    /* ── PRICING ── */
+    .pricing { background: var(--paper); padding: 60px 24px; }
+    .pricing-inner { max-width: 700px; margin: 0 auto; }
+    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 480px) { .pricing-grid { grid-template-columns: 1fr; } }
+    .pricing-card { border-radius: 14px; padding: 28px 24px; }
+    .pricing-card.free { background: white; border: 1.5px solid var(--edge); box-shadow: 0 2px 12px rgba(0,0,0,.06); }
+    .pricing-card.premium { background: var(--cover); box-shadow: 0 8px 32px rgba(0,0,0,.2); }
+    .pricing-card h3 { font-size: 12px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 16px; }
+    .pricing-card.free h3 { color: var(--ink-f); }
+    .pricing-card.premium h3 { color: rgba(255,255,255,.4); }
+    .price { font-size: 36px; font-weight: 900; letter-spacing: -1px; line-height: 1; margin-bottom: 6px; }
+    .pricing-card.free .price { color: var(--ink); }
+    .pricing-card.premium .price { color: white; }
+    .price-sub { font-size: 12px; font-weight: 700; margin-bottom: 20px; }
+    .pricing-card.free .price-sub { color: var(--ink-f); }
+    .pricing-card.premium .price-sub { color: rgba(255,255,255,.35); }
+    .pricing-card ul { list-style: none; }
+    .pricing-card ul li { font-size: 13px; font-weight: 600; line-height: 1.7; padding-left: 18px; position: relative; margin-bottom: 4px; }
+    .pricing-card ul li::before { content: '✓'; position: absolute; left: 0; font-weight: 900; }
+    .pricing-card.free ul li { color: var(--ink-m); }
+    .pricing-card.free ul li::before { color: var(--ok); }
+    .pricing-card.premium ul li { color: rgba(255,255,255,.55); }
+    .pricing-card.premium ul li::before { color: var(--accent); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--ink-b); padding: 40px 24px; text-align: center; }
+    .footer-logo { font-family: 'Caveat', cursive; font-size: 32px; font-weight: 700; color: white; margin-bottom: 16px; }
+    .footer-logo em { color: var(--accent); font-style: normal; }
+    .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+    .footer-links a { color: rgba(255,255,255,.35); font-size: 13px; font-weight: 700; text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: rgba(255,255,255,.7); }
+    footer p { font-size: 11px; font-weight: 600; color: rgba(255,255,255,.18); line-height: 1.7; }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-logo">
+    <div class="hero-icon"><span>N</span></div>
+    <div class="hero-wordmark">Note<em>vo</em></div>
+  </div>
+  <h1>Ton cahier de notes intelligent pour les élèves de Côte d'Ivoire</h1>
+  <p>Calcule tes moyennes avec les coefficients officiels CI. Du collège à la terminale. Gratuit et hors ligne.</p>
+  <div class="cta-group">
+    <a href="https://play.google.com/store/apps/details?id=ci.ruds.notevo" class="btn-primary">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M3 20.5v-17c0-.83 1.0-1.25 1.6-.7l14 8.5c.55.33.55 1.07 0 1.4l-14 8.5C3.98 21.75 3 21.33 3 20.5z"/></svg>
+      Télécharger sur Google Play
+    </a>
+    <a href="#features" class="btn-secondary">Voir les fonctionnalités</a>
+  </div>
+  <span class="badge-free">Version gratuite disponible</span>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="features-inner">
+    <p class="section-label">Fonctionnalités</p>
+    <h2 class="section-title">Tout ce dont tu as besoin<br/>pour suivre tes résultats</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🇨🇮</div>
+        <h3>Coefficients officiels CI</h3>
+        <p>Tous les niveaux du collège au lycée. Coefficients MENET-FP 2024-2025 intégrés pour chaque série.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📴</div>
+        <h3>100% hors ligne</h3>
+        <p>Pas besoin d'internet. Tes notes restent sur ton téléphone et l'app fonctionne partout, même sans connexion.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧮</div>
+        <h3>Calcul automatique</h3>
+        <p>Moyenne par matière, par trimestre, et annuelle selon la formule officielle (T1×1 + T2×2 + T3×2) / 5.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <div class="feature-badge">Standard+</div>
+        <h3>Simulateur de notes</h3>
+        <p>Calcule la note qu'il te faut pour atteindre ta moyenne cible. Avant même de passer le devoir.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📈</div>
+        <div class="feature-badge">Standard+</div>
+        <h3>Graphiques de progression</h3>
+        <p>Visualise l'évolution de chaque matière du T1 au T3. Identifie tes points faibles avant les examens.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">☁️</div>
+        <div class="feature-badge">Premium</div>
+        <h3>Sync cloud & multi-profils</h3>
+        <p>Tes notes sauvegardées et accessibles sur tous tes appareils. Jusqu'à 3 profils pour toute la famille.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NIVEAUX -->
+<section class="levels">
+  <div class="levels-inner">
+    <p class="section-label">Niveaux supportés</p>
+    <h2 class="section-title">De la 6ème à la Terminale</h2>
+    <div class="levels-grid">
+      <div class="level-group">
+        <h4>Collège</h4>
+        <ul><li>6ème</li><li>5ème</li><li>4ème</li><li>3ème</li></ul>
+      </div>
+      <div class="level-group">
+        <h4>Seconde</h4>
+        <ul><li>2nde A</li><li>2nde C</li></ul>
+      </div>
+      <div class="level-group">
+        <h4>Première</h4>
+        <ul><li>1ère A1</li><li>1ère A2</li><li>1ère C</li><li>1ère D</li></ul>
+      </div>
+      <div class="level-group">
+        <h4>Terminale</h4>
+        <ul><li>Tle A1</li><li>Tle A2</li><li>Tle C</li><li>Tle D</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="pricing-inner">
+    <p class="section-label">Tarifs</p>
+    <h2 class="section-title">Gratuit pour commencer,<br/>Premium pour aller plus loin</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card free">
+        <h3>Free</h3>
+        <div class="price">0 F</div>
+        <div class="price-sub">Pour toujours</div>
+        <ul>
+          <li>Calcul complet des moyennes</li>
+          <li>Tous les niveaux CI</li>
+          <li>3 trimestres</li>
+          <li>Mode hors ligne</li>
+          <li>1 profil</li>
+        </ul>
+      </div>
+      <div class="pricing-card premium">
+        <h3>Premium</h3>
+        <div class="price">500 F</div>
+        <div class="price-sub">/ mois · ou 2 500 F / an</div>
+        <ul>
+          <li>Tout le Free inclus</li>
+          <li>Sync cloud multi-appareils</li>
+          <li>Graphiques de progression</li>
+          <li>Simulateur de notes</li>
+          <li>Jusqu'à 3 profils</li>
+          <li>Notifications et rappels</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Note<em>vo</em></div>
+  <div class="footer-links">
+    <a href="privacy.html">Politique de confidentialité</a>
+    <a href="terms.html">Conditions d'utilisation</a>
+    <a href="refund.html">Remboursement</a>
+    <a href="mailto:ruds.devci@gmail.com">Contact</a>
+  </div>
+  <p>
+    Développé par Ruds · Côte d'Ivoire · 2026<br/>
+    Cette application n'est pas affiliée au MENET-FP.<br/>
+    Les coefficients sont issus des documents officiels en libre accès.
+  </p>
+</footer>
+
+</body>
+</html>
