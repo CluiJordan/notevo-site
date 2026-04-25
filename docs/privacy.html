@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="noindex"/>
+  <title>Politique de confidentialité · Notevo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .doc-header {
+      padding: 52px 0 40px;
+      border-bottom: 1px solid var(--border-cream);
+      margin-bottom: 0;
+    }
+    .doc-header-meta {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
+    }
+    .doc-updated {
+      font-size: 11px; color: var(--mist); font-weight: 400;
+    }
+    .doc-intro {
+      font-size: 15px; color: var(--olive); line-height: 1.7;
+      max-width: 600px; margin-top: 14px;
+      padding: 18px 20px; background: var(--ivory);
+      border: 1px solid var(--border-cream); border-radius: 8px;
+    }
+    .doc-body { padding: 8px 0 64px; }
+
+    /* Summary table */
+    .summary-table-wrap {
+      margin: 32px 0;
+    }
+    .summary-table-wrap .table-wrap thead th:first-child { width: 40%; }
+
+    /* Data flow visual */
+    .data-flow {
+      display: grid; grid-template-columns: 1fr auto 1fr;
+      gap: 0; align-items: center;
+      margin: 24px 0; background: white;
+      border: 1px solid var(--border-cream); border-radius: 10px;
+      overflow: hidden; box-shadow: var(--shadow-ring);
+    }
+    .flow-cell {
+      padding: 20px 18px; text-align: center;
+    }
+    .flow-cell-dark {
+      background: var(--near-black);
+      padding: 20px 18px; text-align: center;
+    }
+    .flow-icon { font-size: 22px; display: block; margin-bottom: 8px; }
+    .flow-title {
+      font-family: var(--serif); font-size: 14px; font-weight: 500;
+      color: var(--near-black); margin-bottom: 4px;
+    }
+    .flow-title-light { color: white; }
+    .flow-sub { font-size: 11px; color: var(--mist); }
+    .flow-sub-light { font-size: 11px; color: rgba(255,255,255,.4); }
+    .flow-arrow {
+      font-size: 18px; color: var(--mist); padding: 0 4px; text-align: center;
+    }
+    @media (max-width: 540px) {
+      .data-flow { grid-template-columns: 1fr; }
+      .flow-arrow { transform: rotate(90deg); padding: 4px 0; }
+    }
+
+    /* Third-party cards */
+    .providers-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0;
+    }
+    @media (max-width: 480px) { .providers-grid { grid-template-columns: 1fr; } }
+    .provider-card {
+      padding: 14px 16px; background: var(--ivory);
+      border: 1px solid var(--border-cream); border-radius: 8px;
+    }
+    .provider-name {
+      font-size: 13px; font-weight: 500; color: var(--near-black); margin-bottom: 4px;
+    }
+    .provider-role { font-size: 12px; color: var(--olive); line-height: 1.5; }
+
+    /* Rights list */
+    .rights-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 14px 0;
+    }
+    @media (max-width: 480px) { .rights-grid { grid-template-columns: 1fr; } }
+    .right-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 12px 14px; background: white;
+      border: 1px solid var(--border-cream); border-radius: 7px;
+    }
+    .right-check {
+      width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0;
+      background: var(--brand-tag); color: var(--brand);
+      font-size: 11px; font-weight: 600;
+      display: flex; align-items: center; justify-content: center; margin-top: 1px;
+    }
+    .right-text { font-size: 13px; color: var(--olive); line-height: 1.5; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-mark"><span>N</span></div>
+      <span class="nav-wordmark">Note<em>vo</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="terms.html">Conditions</a>
+      <a href="refund.html">Remboursement</a>
+      <a href="mailto:ruds.devci@gmail.com" class="nav-cta">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-narrow">
+
+  <!-- HEADER -->
+  <header class="doc-header">
+    <div class="doc-header-meta">
+      <span class="eyebrow-tag">Légal</span>
+      <span class="eyebrow-dot">·</span>
+      <span class="doc-updated">Dernière mise à jour : avril 2026</span>
+    </div>
+    <h1 class="heading-1">Politique de<br/>confidentialité</h1>
+    <div class="doc-intro">
+      Notevo est conçu pour respecter ta vie privée. Cette page explique exactement quelles données nous collectons, comment nous les utilisons, et quels droits tu as.
+    </div>
+  </header>
+
+  <!-- BODY -->
+  <div class="doc-body">
+
+    <!-- Comment tes données circulent -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">00</span>
+        En un coup d'œil
+      </h2>
+      <div class="data-flow">
+        <div class="flow-cell">
+          <span class="flow-icon">📱</span>
+          <div class="flow-title">Gratuit sans compte</div>
+          <div class="flow-sub">Toutes les données restent uniquement sur ton téléphone. Rien n'est envoyé.</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-cell-dark">
+          <span class="flow-icon">☁️</span>
+          <div class="flow-title flow-title-light">Premium connecté</div>
+          <div class="flow-sub flow-sub-light">Tes notes sont synchronisées avec le cloud sécurisé uniquement si tu te connectes.</div>
+        </div>
+      </div>
+      <div class="highlight-ok">
+        En version gratuite sans connexion Google, <strong>zéro donnée</strong> ne quitte ton téléphone. L'application fonctionne entièrement en local.
+      </div>
+    </div>
+
+    <!-- Données collectées -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">01</span>
+        Données collectées
+      </h2>
+      <p>Notevo collecte uniquement les données strictement nécessaires à son fonctionnement.</p>
+
+      <div class="summary-table-wrap">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Donnée</th>
+                <th>Quand</th>
+                <th>Pourquoi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Notes saisies &amp; moyennes</td>
+                <td><span class="tag">Toujours</span></td>
+                <td>Calcul et affichage des résultats</td>
+              </tr>
+              <tr>
+                <td>Niveau scolaire sélectionné</td>
+                <td><span class="tag">Toujours</span></td>
+                <td>Application des bons coefficients</td>
+              </tr>
+              <tr>
+                <td>Email &amp; nom d'affichage</td>
+                <td><span class="tag tag-muted">Si connecté</span></td>
+                <td>Identification du compte cloud</td>
+              </tr>
+              <tr>
+                <td>Identifiant de session anonyme</td>
+                <td><span class="tag tag-muted">Si connecté</span></td>
+                <td>Liaison sécurisée des données cloud</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>Nous ne collectons pas de données de localisation, de contacts, ni aucune donnée de navigation.</p>
+    </div>
+
+    <!-- Utilisation -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">02</span>
+        Utilisation des données
+      </h2>
+      <p>Tes données servent exclusivement à faire fonctionner l'application pour toi.</p>
+      <ul>
+        <li>Calculer et afficher tes moyennes scolaires</li>
+        <li>Synchroniser tes notes entre tes appareils (Premium uniquement)</li>
+        <li>Sauvegarder ta progression dans le cloud (Premium uniquement)</li>
+        <li>Améliorer l'application via des statistiques anonymes et agrégées</li>
+      </ul>
+      <div class="highlight-warn" style="margin-top:18px;">
+        Nous ne vendons jamais tes données à des tiers. Tes notes scolaires ne sont jamais partagées avec des annonceurs.
+      </div>
+    </div>
+
+    <!-- Stockage -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">03</span>
+        Stockage &amp; sécurité
+      </h2>
+      <div class="table-wrap" style="margin-bottom:16px;">
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Où</th>
+              <th>Sécurité</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Données locales</td>
+              <td>Stockage interne de ton appareil</td>
+              <td>Protégées par le système Android</td>
+            </tr>
+            <tr>
+              <td>Données cloud (Premium)</td>
+              <td>Supabase — infrastructure EU</td>
+              <td>Chiffrement AES-256, HTTPS/TLS</td>
+            </tr>
+            <tr>
+              <td>Authentification Google</td>
+              <td>Serveurs Google (OAuth 2.0)</td>
+              <td>Standard OAuth 2.0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Toutes les communications entre l'application et nos serveurs sont chiffrées via HTTPS/TLS.</p>
+    </div>
+
+    <!-- Tiers -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">04</span>
+        Prestataires techniques
+      </h2>
+      <p>Nous faisons appel à des services tiers uniquement pour faire fonctionner l'application. Chacun accède uniquement aux données nécessaires à sa mission.</p>
+      <div class="providers-grid">
+        <div class="provider-card">
+          <div class="provider-name">Supabase</div>
+          <div class="provider-role">Base de données et authentification pour les données cloud Premium</div>
+        </div>
+        <div class="provider-card">
+          <div class="provider-name">Google OAuth</div>
+          <div class="provider-role">Connexion sécurisée avec ton compte Google</div>
+        </div>
+        <div class="provider-card">
+          <div class="provider-name">RevenueCat</div>
+          <div class="provider-role">Gestion des abonnements et achats in-app via Google Play</div>
+        </div>
+        <div class="provider-card">
+          <div class="provider-name">Google Play</div>
+          <div class="provider-role">Distribution de l'application sur Android</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mineurs -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">05</span>
+        Enfants &amp; mineurs
+      </h2>
+      <p>
+        Notevo est destiné aux élèves de <strong>13 ans et plus</strong>. Nous ne collectons pas sciemment de données personnelles d'enfants de moins de 13 ans.
+      </p>
+      <p>
+        Si tu es parent et penses que ton enfant de moins de 13 ans a créé un compte, contacte-nous à <a href="mailto:ruds.devci@gmail.com" style="color:var(--brand);">ruds.devci@gmail.com</a> pour supprimer ses données immédiatement.
+      </p>
+    </div>
+
+    <!-- Droits -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">06</span>
+        Tes droits
+      </h2>
+      <p>Tu as le contrôle total sur tes données.</p>
+      <div class="rights-grid">
+        <div class="right-item">
+          <div class="right-check">✓</div>
+          <div class="right-text">Accéder à toutes tes données personnelles</div>
+        </div>
+        <div class="right-item">
+          <div class="right-check">✓</div>
+          <div class="right-text">Supprimer ton compte et l'ensemble de tes données</div>
+        </div>
+        <div class="right-item">
+          <div class="right-check">✓</div>
+          <div class="right-text">Exporter tes données à tout moment</div>
+        </div>
+        <div class="right-item">
+          <div class="right-check">✓</div>
+          <div class="right-text">Corriger des informations inexactes</div>
+        </div>
+      </div>
+      <div class="highlight-info" style="margin-top:6px;">
+        Pour supprimer ton compte, utilise l'option <em>Supprimer mes données</em> dans l'onglet Profil de l'application, ou contacte-nous par email.
+      </div>
+    </div>
+
+    <!-- Notifications -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">07</span>
+        Notifications
+      </h2>
+      <p>
+        Si tu actives les notifications (fonctionnalité Premium), l'application t'envoie des rappels locaux directement sur ton appareil. Ces notifications ne nécessitent aucun serveur et ne transmettent aucune donnée externe.
+      </p>
+      <p>
+        Tu peux les désactiver à tout moment dans les paramètres de l'application ou de ton téléphone.
+      </p>
+    </div>
+
+    <!-- Modifications -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">08</span>
+        Modifications
+      </h2>
+      <p>
+        Nous pouvons mettre à jour cette politique de confidentialité. En cas de modifications importantes, tu en seras informé via une notification dans l'application ou par email si ton adresse est enregistrée.
+      </p>
+      <p>La date de dernière mise à jour est toujours indiquée en haut de cette page.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-box">
+      <p class="contact-box-label">Une question sur tes données ?</p>
+      <a href="mailto:ruds.devci@gmail.com">ruds.devci@gmail.com</a>
+      <p class="contact-box-sub">Notevo · Côte d'Ivoire · 2026</p>
+    </div>
+
+    <p class="caption" style="text-align:center; margin-top:28px; line-height:1.7;">
+      Cette application n'est pas affiliée au MENET-FP.<br/>
+      Les coefficients sont issus des documents officiels en libre accès.
+    </p>
+
+  </div><!-- .doc-body -->
+</div><!-- .page-narrow -->
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="nav-brand" style="margin-bottom:8px;">
+        <div class="nav-mark"><span>N</span></div>
+        <span class="nav-wordmark">Note<em>vo</em></span>
+      </div>
+      <p class="footer-meta">Développé par Ruds · Côte d'Ivoire · 2026</p>
+    </div>
+    <nav class="footer-links-col">
+      <a href="index.html">Accueil</a>
+      <a href="terms.html">Conditions d'utilisation</a>
+      <a href="refund.html">Remboursement</a>
+      <a href="mailto:ruds.devci@gmail.com">Contact</a>
+    </nav>
+  </div>
+  <div class="footer-disclaimer">
+    Cette application n'est pas affiliée au MENET-FP.<br/>
+    Les coefficients sont issus des documents officiels en libre accès.
+  </div>
+</footer>
+
+</body>
+</html>

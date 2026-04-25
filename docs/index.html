@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Notevo — Cahier de notes scolaires intelligent pour les élèves de Côte d'Ivoire. Coefficients officiels MENET-FP, calcul automatique, 100% hors ligne."/>
+  <meta property="og:title" content="Notevo — Cahier de notes · Côte d'Ivoire"/>
+  <meta property="og:description" content="Calcule tes moyennes avec les coefficients officiels CI. Du collège à la terminale."/>
+  <meta property="og:type" content="website"/>
+  <meta name="theme-color" content="#f5f4ed"/>
+  <title>Notevo — Cahier de notes scolaires · Côte d'Ivoire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* Page-specific styles */
+    .hero {
+      padding: 72px 0 64px;
+      border-bottom: 1px solid var(--border-cream);
+    }
+    .hero-headline {
+      font-family: var(--serif);
+      font-size: clamp(38px, 5.5vw, 56px); font-weight: 500;
+      line-height: 1.1; letter-spacing: -0.025em;
+      color: var(--near-black); margin-bottom: 20px; max-width: 680px;
+    }
+    .hero-headline em { font-style: italic; color: var(--brand); }
+    .hero-sub {
+      font-size: 17px; color: var(--olive); max-width: 520px;
+      line-height: 1.65; margin-bottom: 36px; font-weight: 400;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 52px; }
+
+    section { padding: 60px 0; border-bottom: 1px solid var(--border-cream); }
+    section:last-of-type { border-bottom: none; }
+
+    .section-head { margin-bottom: 36px; }
+
+    /* Layout: levels */
+    .levels-layout {
+      display: grid; grid-template-columns: 5fr 7fr; gap: 48px; align-items: start;
+    }
+    @media (max-width: 640px) { .levels-layout { grid-template-columns: 1fr; gap: 28px; } }
+
+    /* Layout: why */
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 540px) { .why-grid { grid-template-columns: 1fr; } }
+    .why-item {
+      padding: 20px; background: white;
+      border: 1px solid var(--border-cream); border-radius: 10px;
+      box-shadow: var(--shadow-ring);
+    }
+    .why-icon { font-size: 20px; margin-bottom: 10px; display: block; }
+    .why-item h4 {
+      font-family: var(--serif); font-size: 15px; font-weight: 500;
+      color: var(--near-black); margin-bottom: 6px;
+    }
+    .why-item p { font-size: 13px; color: var(--olive); line-height: 1.6; }
+
+    .badge-free {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 11px; color: var(--mist); font-weight: 400;
+      padding: 5px 10px; border: 1px solid var(--border-cream);
+      border-radius: 20px; background: white;
+    }
+    .badge-free::before { content: '●'; color: #4caf50; font-size: 8px; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-mark"><span>N</span></div>
+      <span class="nav-wordmark">Note<em>vo</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="#features">Fonctionnalités</a>
+      <a href="#levels">Niveaux</a>
+      <a href="#pricing">Tarifs</a>
+      <a href="privacy.html">Confidentialité</a>
+      <a href="https://play.google.com/store/apps/details?id=ci.ruds.notevo" class="nav-cta">Télécharger</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="eyebrow-row">
+      <span class="eyebrow-tag">Application mobile</span>
+      <span class="eyebrow-dot">·</span>
+      <span class="eyebrow-meta">Côte d'Ivoire · 2026</span>
+    </div>
+    <h1 class="hero-headline">
+      Ton cahier de notes <em>intelligent</em><br/>pour les élèves ivoiriens
+    </h1>
+    <p class="hero-sub">
+      Calcule tes moyennes avec les coefficients officiels MENET-FP.
+      Du collège à la terminale — gratuit, hors ligne, conçu pour toi.
+    </p>
+    <div class="hero-actions">
+      <a href="https://play.google.com/store/apps/details?id=ci.ruds.notevo" class="btn btn-brand">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M3 20.5v-17c0-.83 1-1.25 1.6-.7l14 8.5c.55.33.55 1.07 0 1.4l-14 8.5C4 21.75 3 21.33 3 20.5z"/></svg>
+        Télécharger sur Google Play
+      </a>
+      <a href="#features" class="btn btn-outline">Voir les fonctionnalités →</a>
+    </div>
+
+    <!-- Metrics -->
+    <div class="metrics-row">
+      <div class="metric-cell">
+        <span class="metric-value">14</span>
+        <span class="metric-label">Niveaux supportés</span>
+      </div>
+      <div class="metric-cell">
+        <span class="metric-value">3</span>
+        <span class="metric-label">Trimestres</span>
+      </div>
+      <div class="metric-cell">
+        <span class="metric-value">100%</span>
+        <span class="metric-label">Hors ligne</span>
+      </div>
+      <div class="metric-cell">
+        <span class="metric-value">0 F</span>
+        <span class="metric-label">Toujours gratuit</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="section-head">
+      <span class="section-label">Fonctionnalités</span>
+      <h2 class="section-title">Tout ce dont tu as besoin<br/>pour suivre tes résultats</h2>
+      <p class="lede" style="margin-top:14px;">
+        De la saisie de notes au simulateur de projection annuelle — conçu pour les réalités du système éducatif ivoirien.
+      </p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-cell">
+        <span class="feature-icon">🇨🇮</span>
+        <h3>Coefficients officiels CI</h3>
+        <p>Tous les niveaux du collège au lycée. Coefficients MENET-FP 2024-2025 intégrés pour chaque série.</p>
+      </div>
+      <div class="feature-cell">
+        <span class="feature-icon">📴</span>
+        <h3>100% hors ligne</h3>
+        <p>Pas besoin d'internet. Tes notes restent sur ton téléphone et l'app fonctionne partout, même sans connexion.</p>
+      </div>
+      <div class="feature-cell">
+        <span class="feature-icon">🧮</span>
+        <h3>Calcul automatique</h3>
+        <p>Moyenne par matière, par trimestre et annuelle selon la formule officielle (T1×1 + T2×2 + T3×2) / 5.</p>
+      </div>
+      <div class="feature-cell">
+        <div class="feature-badge">Standard+</div>
+        <span class="feature-icon">🎯</span>
+        <h3>Simulateur de notes</h3>
+        <p>Calcule la note dont tu as besoin pour atteindre ta moyenne cible. Avant même de passer le devoir.</p>
+      </div>
+      <div class="feature-cell">
+        <div class="feature-badge">Standard+</div>
+        <span class="feature-icon">📈</span>
+        <h3>Graphiques de progression</h3>
+        <p>Visualise l'évolution de chaque matière du T1 au T3. Identifie tes points faibles avant les examens.</p>
+      </div>
+      <div class="feature-cell">
+        <div class="feature-badge">Premium</div>
+        <span class="feature-icon">☁️</span>
+        <h3>Sync cloud & multi-profils</h3>
+        <p>Notes sauvegardées sur tous tes appareils. Jusqu'à 3 profils pour toute la famille.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEVELS -->
+  <section id="levels">
+    <div class="levels-layout">
+      <div>
+        <span class="section-label">Niveaux supportés</span>
+        <h2 class="section-title">De la 6ème<br/>à la Terminale</h2>
+        <p class="body-text" style="margin-top:14px; margin-bottom:24px;">
+          Notevo couvre l'intégralité du parcours secondaire ivoirien, avec les coefficients propres à chaque série et chaque cycle.
+        </p>
+        <blockquote class="quote">
+          Les vrais coefficients MENET-FP — pas une approximation.
+        </blockquote>
+        <div class="why-grid" style="margin-top:24px;">
+          <div class="why-item">
+            <span class="why-icon">🔒</span>
+            <h4>Données privées</h4>
+            <p>En version gratuite, zéro donnée envoyée sur nos serveurs.</p>
+          </div>
+          <div class="why-item">
+            <span class="why-icon">⚡</span>
+            <h4>Instantané</h4>
+            <p>Calcul en temps réel, sans attendre, sans charger.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Cycle</th>
+              <th>Niveaux disponibles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-label">Collège</td>
+              <td>
+                <div class="tags-wrap">
+                  <span class="tag">6ème</span>
+                  <span class="tag">5ème</span>
+                  <span class="tag">4ème</span>
+                  <span class="tag">3ème</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="td-label">Seconde</td>
+              <td>
+                <div class="tags-wrap">
+                  <span class="tag">2nde A</span>
+                  <span class="tag">2nde C</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="td-label">Première</td>
+              <td>
+                <div class="tags-wrap">
+                  <span class="tag">1ère A1</span>
+                  <span class="tag">1ère A2</span>
+                  <span class="tag">1ère C</span>
+                  <span class="tag">1ère D</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="td-label">Terminale</td>
+              <td>
+                <div class="tags-wrap">
+                  <span class="tag">Tle A1</span>
+                  <span class="tag">Tle A2</span>
+                  <span class="tag">Tle C</span>
+                  <span class="tag">Tle D</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="section-head">
+      <span class="section-label">Tarifs</span>
+      <h2 class="section-title">Gratuit pour commencer,<br/>puissant pour aller plus loin</h2>
+      <p class="lede" style="margin-top:14px;">
+        Les fonctionnalités essentielles sont et restent gratuites. Les outils avancés sont disponibles sans engagement.
+      </p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <p class="plan-name">Gratuit</p>
+        <div class="plan-amount">0</div>
+        <div class="plan-per">FCFA · pour toujours</div>
+        <div class="plan-rule"></div>
+        <ul class="plan-feats">
+          <li>Calcul complet des moyennes</li>
+          <li>14 niveaux MENET-FP</li>
+          <li>3 trimestres</li>
+          <li>Mode 100% hors ligne</li>
+          <li>1 profil élève</li>
+        </ul>
+        <a href="https://play.google.com/store/apps/details?id=ci.ruds.notevo" class="plan-action plan-action-ghost">Télécharger</a>
+      </div>
+      <div class="pricing-card tier-standard">
+        <p class="plan-name">Standard</p>
+        <div class="plan-amount">250</div>
+        <div class="plan-per">FCFA/mois · ou 1 500 F/an</div>
+        <div class="plan-rule"></div>
+        <ul class="plan-feats">
+          <li>Tout du forfait Gratuit</li>
+          <li>Graphiques de progression</li>
+          <li>Simulateur de notes</li>
+          <li>Projection de moyenne annuelle</li>
+        </ul>
+        <a href="https://play.google.com/store/apps/details?id=ci.ruds.notevo" class="plan-action plan-action-fill">Essayer Standard</a>
+      </div>
+      <div class="pricing-card tier-premium">
+        <p class="plan-name">Premium</p>
+        <div class="plan-amount">500</div>
+        <div class="plan-per">FCFA/mois · ou 2 500 F/an</div>
+        <div class="plan-rule"></div>
+        <ul class="plan-feats">
+          <li>Tout du forfait Standard</li>
+          <li>Sync cloud multi-appareils</li>
+          <li>Jusqu'à 3 profils</li>
+          <li>Notifications & rappels</li>
+          <li>Accès prioritaire aux nouveautés</li>
+        </ul>
+        <a href="https://play.google.com/store/apps/details?id=ci.ruds.notevo" class="plan-action plan-action-fill">Essayer Premium</a>
+      </div>
+    </div>
+  </section>
+
+</div><!-- .page -->
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="nav-brand" style="margin-bottom:8px;">
+        <div class="nav-mark"><span>N</span></div>
+        <span class="nav-wordmark">Note<em>vo</em></span>
+      </div>
+      <p class="footer-meta">
+        Développé par Ruds · Côte d'Ivoire · 2026<br/>
+        Conçu pour les élèves ivoiriens, du collège à la Terminale.
+      </p>
+    </div>
+    <nav class="footer-links-col">
+      <a href="privacy.html">Politique de confidentialité</a>
+      <a href="terms.html">Conditions d'utilisation</a>
+      <a href="refund.html">Remboursement</a>
+      <a href="mailto:ruds.devci@gmail.com">Contact</a>
+    </nav>
+  </div>
+  <div class="footer-disclaimer">
+    Cette application n'est pas affiliée au MENET-FP.<br/>
+    Les coefficients sont issus des documents officiels en libre accès.
+  </div>
+</footer>
+
+</body>
+</html>

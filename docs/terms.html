@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="noindex"/>
+  <title>Conditions d'utilisation · Notevo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .doc-header {
+      padding: 52px 0 40px;
+      border-bottom: 1px solid var(--border-cream);
+    }
+    .doc-header-meta {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
+    }
+    .doc-updated { font-size: 11px; color: var(--mist); font-weight: 400; }
+    .doc-intro {
+      font-size: 15px; color: var(--olive); line-height: 1.7;
+      max-width: 600px; margin-top: 14px;
+      padding: 18px 20px; background: var(--ivory);
+      border: 1px solid var(--border-cream); border-radius: 8px;
+    }
+    .doc-body { padding: 8px 0 64px; }
+
+    /* Plan comparison */
+    .plan-compare {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 20px 0;
+    }
+    @media (max-width: 540px) { .plan-compare { grid-template-columns: 1fr; } }
+    .plan-compare-card {
+      padding: 16px; border-radius: 9px;
+      border: 1px solid var(--border-cream); background: white;
+    }
+    .plan-compare-card.is-std { border-color: rgba(192,70,26,.3); }
+    .plan-compare-card.is-prem {
+      background: var(--near-black); border-color: transparent;
+    }
+    .pcc-name {
+      font-size: 10px; font-weight: 500; text-transform: uppercase;
+      letter-spacing: .1em; color: var(--mist); margin-bottom: 6px;
+    }
+    .is-prem .pcc-name { color: rgba(255,255,255,.35); }
+    .pcc-price {
+      font-family: var(--serif); font-size: 22px; font-weight: 500;
+      color: var(--near-black); margin-bottom: 12px; line-height: 1;
+    }
+    .is-prem .pcc-price { color: white; }
+    .pcc-list { list-style: none; }
+    .pcc-list li {
+      font-size: 12px; color: var(--olive); padding: 3px 0 3px 16px;
+      position: relative; line-height: 1.45;
+    }
+    .is-prem .pcc-list li { color: rgba(255,255,255,.5); }
+    .pcc-list li::before {
+      content: '✓'; position: absolute; left: 0;
+      color: var(--brand); font-size: 10px; top: 4px;
+    }
+
+    /* Forbidden list */
+    .forbidden-list { list-style: none; }
+    .forbidden-list li {
+      font-size: 14px; color: var(--olive); line-height: 1.7;
+      padding: 6px 0 6px 20px; position: relative;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .forbidden-list li:last-child { border-bottom: none; }
+    .forbidden-list li::before {
+      content: '✕'; position: absolute; left: 0;
+      color: var(--brand); font-size: 11px; top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-mark"><span>N</span></div>
+      <span class="nav-wordmark">Note<em>vo</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="privacy.html">Confidentialité</a>
+      <a href="refund.html">Remboursement</a>
+      <a href="mailto:ruds.devci@gmail.com" class="nav-cta">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-narrow">
+
+  <!-- HEADER -->
+  <header class="doc-header">
+    <div class="doc-header-meta">
+      <span class="eyebrow-tag">Légal</span>
+      <span class="eyebrow-dot">·</span>
+      <span class="doc-updated">Dernière mise à jour : avril 2026</span>
+    </div>
+    <h1 class="heading-1">Conditions<br/>d'utilisation</h1>
+    <div class="doc-intro">
+      En téléchargeant ou en utilisant Notevo, tu acceptes les présentes conditions. Elles sont rédigées pour être lisibles — pas pour être incompréhensibles.
+    </div>
+  </header>
+
+  <div class="doc-body">
+
+    <!-- Description -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">01</span>
+        Description du service
+      </h2>
+      <p>
+        Notevo est une application mobile de gestion de notes scolaires destinée aux élèves ivoiriens du collège et du lycée (6ème à Terminale). Elle permet de saisir, calculer et suivre ses moyennes selon les coefficients officiels du système éducatif ivoirien.
+      </p>
+      <p>
+        Notevo est disponible en version <strong>Gratuite</strong>, <strong>Standard</strong> et <strong>Premium</strong>.
+      </p>
+
+      <div class="plan-compare">
+        <div class="plan-compare-card">
+          <div class="pcc-name">Gratuit</div>
+          <div class="pcc-price">0 F</div>
+          <ul class="pcc-list">
+            <li>Calcul des moyennes</li>
+            <li>Tous les niveaux CI</li>
+            <li>3 trimestres</li>
+            <li>Mode hors ligne</li>
+            <li>1 profil</li>
+          </ul>
+        </div>
+        <div class="plan-compare-card is-std">
+          <div class="pcc-name">Standard</div>
+          <div class="pcc-price">250 F<span style="font-size:14px;color:var(--mist);">/mois</span></div>
+          <ul class="pcc-list">
+            <li>Graphiques de progression</li>
+            <li>Simulateur de notes</li>
+            <li>Projection annuelle</li>
+          </ul>
+        </div>
+        <div class="plan-compare-card is-prem">
+          <div class="pcc-name">Premium</div>
+          <div class="pcc-price">500 F<span style="font-size:14px;color:rgba(255,255,255,.3);">/mois</span></div>
+          <ul class="pcc-list">
+            <li>Sync cloud multi-appareils</li>
+            <li>Jusqu'à 3 profils</li>
+            <li>Notifications rappels</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>Les tarifs en vigueur sont affichés dans l'application au moment de l'achat. Notevo se réserve le droit de les modifier avec un préavis raisonnable.</p>
+    </div>
+
+    <!-- Compte -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">02</span>
+        Compte utilisateur
+      </h2>
+      <p>La connexion via Google est <strong>optionnelle</strong>. Elle est requise uniquement pour les fonctionnalités de synchronisation cloud (Premium). Tu es responsable de la confidentialité de ton compte.</p>
+      <ul>
+        <li>Tu dois avoir au moins <strong>13 ans</strong> pour créer un compte</li>
+        <li>Les informations fournies doivent être exactes</li>
+        <li>Tu ne peux pas transférer ton compte à une autre personne</li>
+      </ul>
+    </div>
+
+    <!-- Utilisation acceptable -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">03</span>
+        Utilisation acceptable
+      </h2>
+      <p>Tu t'engages à utiliser Notevo uniquement à des fins personnelles et légales. Il est interdit de :</p>
+      <div class="card" style="margin-top:14px;">
+        <ul class="forbidden-list">
+          <li>Tenter de contourner ou pirater les systèmes de l'application</li>
+          <li>Utiliser l'application à des fins commerciales sans autorisation</li>
+          <li>Reproduire, distribuer ou modifier l'application sans accord écrit</li>
+          <li>Utiliser un compte Premium partagé entre plusieurs utilisateurs non autorisés</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Précision calculs -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">04</span>
+        Précision des calculs
+      </h2>
+      <div class="highlight-warn">
+        Notevo calcule les moyennes sur la base des coefficients officiels du MENET-FP (Côte d'Ivoire), disponibles en libre accès. <strong>Cette application n'est pas affiliée au MENET-FP.</strong>
+      </div>
+      <p>
+        Bien que nous fassions tous les efforts pour assurer l'exactitude des calculs, Notevo ne saurait être tenu responsable d'éventuelles erreurs ou de données obsolètes. Les résultats affichés ne remplacent pas les bulletins officiels délivrés par les établissements scolaires.
+      </p>
+    </div>
+
+    <!-- Propriété intellectuelle -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">05</span>
+        Propriété intellectuelle
+      </h2>
+      <p>L'application Notevo, son design, son code source, ses graphismes et son logo sont la propriété exclusive de leur développeur. Toute reproduction non autorisée est interdite.</p>
+      <p>Les coefficients scolaires utilisés sont des données publiques officielles de l'État de Côte d'Ivoire.</p>
+    </div>
+
+    <!-- Disponibilité -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">06</span>
+        Disponibilité du service
+      </h2>
+      <p>Nous nous efforçons de maintenir l'application disponible en permanence. Des interruptions peuvent survenir pour maintenance ou raisons techniques. Nous ne garantissons pas une disponibilité ininterrompue du service cloud.</p>
+      <div class="highlight-ok">
+        Les fonctionnalités hors ligne restent accessibles même en cas d'interruption des serveurs cloud.
+      </div>
+    </div>
+
+    <!-- Résiliation -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">07</span>
+        Résiliation
+      </h2>
+      <p>Tu peux cesser d'utiliser Notevo à tout moment et supprimer l'application. Pour supprimer ton compte et tes données cloud, utilise l'option disponible dans l'onglet Profil ou contacte-nous.</p>
+      <p>Nous nous réservons le droit de suspendre un compte en cas de violation des présentes conditions.</p>
+    </div>
+
+    <!-- Limitation -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">08</span>
+        Limitation de responsabilité
+      </h2>
+      <p>Dans les limites permises par la loi applicable, Notevo ne pourra être tenu responsable de dommages indirects ou accessoires liés à l'utilisation ou à l'impossibilité d'utiliser l'application.</p>
+    </div>
+
+    <!-- Modifications -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">09</span>
+        Modifications des conditions
+      </h2>
+      <p>Nous pouvons modifier ces conditions à tout moment. Les modifications entrent en vigueur dès leur publication. L'utilisation continue de l'application après modification vaut acceptation des nouvelles conditions.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-box">
+      <p class="contact-box-label">Des questions sur ces conditions ?</p>
+      <a href="mailto:ruds.devci@gmail.com">ruds.devci@gmail.com</a>
+      <p class="contact-box-sub">Notevo · Côte d'Ivoire · 2026</p>
+    </div>
+
+    <p class="caption" style="text-align:center; margin-top:28px; line-height:1.7;">
+      Cette application n'est pas affiliée au MENET-FP.<br/>
+      Les coefficients sont issus des documents officiels en libre accès.
+    </p>
+
+  </div>
+</div><!-- .page-narrow -->
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="nav-brand" style="margin-bottom:8px;">
+        <div class="nav-mark"><span>N</span></div>
+        <span class="nav-wordmark">Note<em>vo</em></span>
+      </div>
+      <p class="footer-meta">Développé par Ruds · Côte d'Ivoire · 2026</p>
+    </div>
+    <nav class="footer-links-col">
+      <a href="index.html">Accueil</a>
+      <a href="privacy.html">Confidentialité</a>
+      <a href="refund.html">Remboursement</a>
+      <a href="mailto:ruds.devci@gmail.com">Contact</a>
+    </nav>
+  </div>
+  <div class="footer-disclaimer">
+    Cette application n'est pas affiliée au MENET-FP.<br/>
+    Les coefficients sont issus des documents officiels en libre accès.
+  </div>
+</footer>
+
+</body>
+</html>
