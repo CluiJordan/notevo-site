@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="noindex"/>
+  <title>Supprimer mon compte · Notevo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .doc-header {
+      padding: 52px 0 40px;
+      border-bottom: 1px solid var(--border-cream);
+      margin-bottom: 0;
+    }
+    .doc-header-meta {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
+    }
+    .doc-updated {
+      font-size: 11px; color: var(--mist); font-weight: 400;
+    }
+    .doc-intro {
+      font-size: 15px; color: var(--olive); line-height: 1.7;
+      max-width: 600px; margin-top: 14px;
+      padding: 18px 20px; background: var(--ivory);
+      border: 1px solid var(--border-cream); border-radius: 8px;
+    }
+    .doc-body { padding: 8px 0 64px; }
+
+    /* Steps */
+    .steps { margin: 16px 0; }
+    .step-item {
+      display: flex; gap: 16px; padding: 16px 0;
+      border-bottom: 1px solid var(--border-light); align-items: flex-start;
+    }
+    .step-item:last-child { border-bottom: none; }
+    .step-num {
+      width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0;
+      background: var(--brand); color: white;
+      font-size: 13px; font-weight: 600;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .step-content { flex: 1; }
+    .step-title {
+      font-size: 14px; font-weight: 600; color: var(--near-black); margin-bottom: 4px;
+    }
+    .step-desc {
+      font-size: 13px; color: var(--olive); line-height: 1.65;
+    }
+
+    /* Data grid */
+    .data-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0;
+    }
+    @media (max-width: 480px) { .data-grid { grid-template-columns: 1fr; } }
+    .data-card {
+      padding: 14px 16px; border-radius: 9px;
+      border: 1px solid var(--border-cream); background: white;
+      display: flex; gap: 10px; align-items: flex-start;
+    }
+    .data-icon {
+      width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+      font-size: 12px; font-weight: 600;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .data-icon.del { background: #fef0ee; color: var(--brand); }
+    .data-text { font-size: 13px; color: var(--olive); line-height: 1.5; }
+
+    /* CTA button */
+    .cta-wrap { margin-top: 32px; }
+    .btn-delete {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--brand);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      box-shadow: 0 3px 0 var(--brand-d);
+      transition: opacity .15s, transform .1s;
+    }
+    .btn-delete:hover { opacity: .88; transform: translateY(-1px); }
+    .btn-note {
+      font-size: 12px; color: var(--mist); margin-top: 10px; line-height: 1.6;
+    }
+
+    .highlight-warn {
+      background: #fef4ed;
+      border: 1px solid rgba(192,70,26,0.18);
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 13px;
+      color: var(--olive);
+      line-height: 1.65;
+      margin-top: 14px;
+    }
+    .highlight-warn strong { color: var(--brand-d); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-mark"><span>N</span></div>
+      <span class="nav-wordmark">Note<em>vo</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="privacy.html">Confidentialité</a>
+      <a href="terms.html">Conditions</a>
+      <a href="mailto:ruds.devci@gmail.com" class="nav-cta">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-narrow">
+
+  <!-- HEADER -->
+  <header class="doc-header">
+    <div class="doc-header-meta">
+      <span class="eyebrow-tag">Compte</span>
+      <span class="eyebrow-dot">·</span>
+      <span class="doc-updated">Notevo · Côte d'Ivoire</span>
+    </div>
+    <h1 class="heading-1">Supprimer<br/>mon compte</h1>
+    <div class="doc-intro">
+      Tu peux demander la suppression de ton compte Notevo et de toutes tes données associées à tout moment, sans justification.
+    </div>
+  </header>
+
+  <!-- BODY -->
+  <div class="doc-body">
+
+    <!-- Procédure -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">01</span>
+        Procédure
+      </h2>
+      <div class="steps">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Envoie ta demande par e-mail</div>
+            <div class="step-desc">Clique sur le bouton ci-dessous pour nous envoyer un e-mail depuis l'adresse Google associée à ton compte Notevo.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Confirmation sous 48h</div>
+            <div class="step-desc">Tu recevras un e-mail de confirmation une fois ta demande traitée.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Suppression effective sous 7 jours ouvrés</div>
+            <div class="step-desc">Toutes tes données seront définitivement supprimées de nos serveurs dans ce délai.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Données supprimées -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">02</span>
+        Données supprimées
+      </h2>
+      <p>Les données suivantes seront définitivement et irréversiblement supprimées :</p>
+      <div class="data-grid">
+        <div class="data-card">
+          <div class="data-icon del">✕</div>
+          <div class="data-text">Ton compte et profil utilisateur (nom, e-mail, avatar)</div>
+        </div>
+        <div class="data-card">
+          <div class="data-icon del">✕</div>
+          <div class="data-text">Toutes tes notes et évaluations saisies</div>
+        </div>
+        <div class="data-card">
+          <div class="data-icon del">✕</div>
+          <div class="data-text">Tes profils élèves et données de synchronisation</div>
+        </div>
+        <div class="data-card">
+          <div class="data-icon del">✕</div>
+          <div class="data-text">Ton statut d'abonnement et historique d'achats</div>
+        </div>
+      </div>
+      <div class="highlight-warn">
+        <strong>Attention :</strong> cette action est irréversible. Tes notes et données cloud ne pourront pas être récupérées après suppression.
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="doc-section">
+      <h2 class="doc-section-title">
+        <span class="doc-section-num">03</span>
+        Envoyer ma demande
+      </h2>
+      <p>Envoie ta demande depuis l'adresse Gmail associée à ton compte Notevo afin que nous puissions identifier et supprimer tes données.</p>
+      <div class="cta-wrap">
+        <a class="btn-delete" href="mailto:ruds.devci@gmail.com?subject=Suppression%20de%20compte%20Notevo&body=Bonjour%2C%0A%0AJe%20souhaite%20supprimer%20mon%20compte%20Notevo%20ainsi%20que%20toutes%20mes%20donn%C3%A9es%20associ%C3%A9es.%0A%0AAdresse%20Google%20associ%C3%A9e%20%3A%20%5Bvotre%20adresse%5D%0A%0AMerci.">
+          Envoyer la demande de suppression
+        </a>
+        <p class="btn-note">Traitement sous 7 jours ouvrés · Suppression définitive et irréversible</p>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-box">
+      <p class="contact-box-label">Une question ?</p>
+      <a href="mailto:ruds.devci@gmail.com">ruds.devci@gmail.com</a>
+      <p class="contact-box-sub">Notevo · Côte d'Ivoire · 2026</p>
+    </div>
+
+  </div><!-- .doc-body -->
+</div><!-- .page-narrow -->
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="nav-brand" style="margin-bottom:8px;">
+        <div class="nav-mark"><span>N</span></div>
+        <span class="nav-wordmark">Note<em>vo</em></span>
+      </div>
+      <p class="footer-meta">Développé par Ruds · Côte d'Ivoire · 2026</p>
+    </div>
+    <nav class="footer-links-col">
+      <a href="index.html">Accueil</a>
+      <a href="privacy.html">Confidentialité</a>
+      <a href="terms.html">Conditions d'utilisation</a>
+      <a href="refund.html">Remboursement</a>
+      <a href="mailto:ruds.devci@gmail.com">Contact</a>
+    </nav>
+  </div>
+  <div class="footer-disclaimer">
+    Cette application n'est pas affiliée au MENET-FP.<br/>
+    Les coefficients sont issus des documents officiels en libre accès.
+  </div>
+</footer>
+
+</body>
+</html>
