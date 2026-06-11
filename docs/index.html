@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Notevo — Cahier de notes scolaires intelligent pour les élèves de Côte d'Ivoire. Coefficients officiels DPFC, calcul automatique, 100% hors ligne."/>
+  <meta name="description" content="Notevo — Cahier de notes scolaires intelligent pour les élèves de Côte d'Ivoire. Coefficients officiels DPFC, calcul automatique, hors ligne."/>
   <meta property="og:title" content="Notevo — Cahier de notes · Côte d'Ivoire"/>
   <meta property="og:description" content="Calcule tes moyennes avec les coefficients officiels CI. Du collège à la terminale."/>
   <meta property="og:type" content="website"/>
@@ -14,7 +14,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
   <style>
-    /* Page-specific styles */
     .hero {
       padding: 72px 0 64px;
       border-bottom: 1px solid var(--border-cream);
@@ -37,13 +36,11 @@
 
     .section-head { margin-bottom: 36px; }
 
-    /* Layout: levels */
     .levels-layout {
       display: grid; grid-template-columns: 5fr 7fr; gap: 48px; align-items: start;
     }
     @media (max-width: 640px) { .levels-layout { grid-template-columns: 1fr; gap: 28px; } }
 
-    /* Layout: why */
     .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     @media (max-width: 540px) { .why-grid { grid-template-columns: 1fr; } }
     .why-item {
@@ -51,20 +48,18 @@
       border: 1px solid var(--border-cream); border-radius: 10px;
       box-shadow: var(--shadow-ring);
     }
-    .why-icon { font-size: 20px; margin-bottom: 10px; display: block; }
+    .why-icon {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: var(--brand-tag);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 10px;
+    }
+    .why-icon svg { width: 16px; height: 16px; stroke: var(--brand); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
     .why-item h4 {
       font-family: var(--serif); font-size: 15px; font-weight: 500;
       color: var(--near-black); margin-bottom: 6px;
     }
     .why-item p { font-size: 13px; color: var(--olive); line-height: 1.6; }
-
-    .badge-free {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: 11px; color: var(--mist); font-weight: 400;
-      padding: 5px 10px; border: 1px solid var(--border-cream);
-      border-radius: 20px; background: white;
-    }
-    .badge-free::before { content: '●'; color: #4caf50; font-size: 8px; }
   </style>
 </head>
 <body>
@@ -83,6 +78,18 @@
       <a href="privacy.html">Confidentialité</a>
       <a href="https://play.google.com/store/apps/details?id=ci.ruds.notevo" class="nav-cta">Télécharger</a>
     </div>
+    <button class="nav-hamburger" onclick="document.querySelector('.nav-mobile').classList.toggle('open')" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="nav-mobile">
+    <a href="#features" onclick="this.closest('.nav-mobile').classList.remove('open')">Fonctionnalités</a>
+    <a href="#levels" onclick="this.closest('.nav-mobile').classList.remove('open')">Niveaux</a>
+    <a href="#pricing" onclick="this.closest('.nav-mobile').classList.remove('open')">Tarifs</a>
+    <a href="privacy.html">Confidentialité</a>
+    <a href="https://play.google.com/store/apps/details?id=ci.ruds.notevo" class="nav-mobile-cta">Télécharger sur Google Play</a>
   </div>
 </nav>
 
@@ -100,7 +107,7 @@
     </h1>
     <p class="hero-sub">
       Calcule tes moyennes avec les coefficients officiels de la DPFC.
-      Du collège à la terminale — gratuit, hors ligne, conçu pour toi.
+      Du collège à la terminale — gratuit, conçu pour toi.
     </p>
     <div class="hero-actions">
       <a href="https://play.google.com/store/apps/details?id=ci.ruds.notevo" class="btn btn-brand">
@@ -121,8 +128,8 @@
         <span class="metric-label">Trimestres</span>
       </div>
       <div class="metric-cell">
-        <span class="metric-value">100%</span>
-        <span class="metric-label">Hors ligne</span>
+        <span class="metric-value">Offline</span>
+        <span class="metric-label">Calcul sans internet</span>
       </div>
       <div class="metric-cell">
         <span class="metric-value">0 F</span>
@@ -142,37 +149,49 @@
     </div>
     <div class="features-grid">
       <div class="feature-cell">
-        <span class="feature-icon">🇨🇮</span>
+        <span class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </span>
         <h3>Coefficients officiels CI</h3>
         <p>Tous les niveaux du collège au lycée. Coefficients officiels DPFC intégrés pour chaque série.</p>
       </div>
       <div class="feature-cell">
-        <span class="feature-icon">📴</span>
-        <h3>100% hors ligne</h3>
-        <p>Pas besoin d'internet. Tes notes restent sur ton téléphone et l'app fonctionne partout, même sans connexion.</p>
+        <span class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </span>
+        <h3>Calcul hors ligne</h3>
+        <p>Le calcul fonctionne sans connexion. Tes notes sont accessibles même hors ligne, partout.</p>
       </div>
       <div class="feature-cell">
-        <span class="feature-icon">🧮</span>
+        <span class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="12" x2="8.01" y2="12"/><line x1="12" y1="12" x2="12.01" y2="12"/><line x1="16" y1="12" x2="16.01" y2="12"/><line x1="8" y1="16" x2="16" y2="16"/></svg>
+        </span>
         <h3>Calcul automatique</h3>
         <p>Moyenne par matière, par trimestre et annuelle selon la formule officielle (T1×1 + T2×2 + T3×2) / 5.</p>
       </div>
       <div class="feature-cell">
         <div class="feature-badge">Standard+</div>
-        <span class="feature-icon">🎯</span>
+        <span class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        </span>
         <h3>Simulateur de notes</h3>
         <p>Calcule la note dont tu as besoin pour atteindre ta moyenne cible. Avant même de passer le devoir.</p>
       </div>
       <div class="feature-cell">
         <div class="feature-badge">Standard+</div>
-        <span class="feature-icon">📈</span>
+        <span class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </span>
         <h3>Graphiques de progression</h3>
         <p>Visualise l'évolution de chaque matière du T1 au T3. Identifie tes points faibles avant les examens.</p>
       </div>
       <div class="feature-cell">
         <div class="feature-badge">Premium</div>
-        <span class="feature-icon">☁️</span>
-        <h3>Sync cloud & multi-profils</h3>
-        <p>Notes sauvegardées sur tous tes appareils. Jusqu'à 3 profils pour toute la famille.</p>
+        <span class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
+        <h3>Jusqu'à 3 profils</h3>
+        <p>Gère les notes de toute la famille sur un seul compte. Chaque élève a son propre espace.</p>
       </div>
     </div>
   </section>
@@ -191,12 +210,16 @@
         </blockquote>
         <div class="why-grid" style="margin-top:24px;">
           <div class="why-item">
-            <span class="why-icon">🔒</span>
-            <h4>Données privées</h4>
-            <p>En version gratuite, zéro donnée envoyée sur nos serveurs.</p>
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h4>Sécurisé</h4>
+            <p>Tes notes sont liées à ton compte et accessibles uniquement par toi.</p>
           </div>
           <div class="why-item">
-            <span class="why-icon">⚡</span>
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
             <h4>Instantané</h4>
             <p>Calcul en temps réel, sans attendre, sans charger.</p>
           </div>
@@ -280,7 +303,8 @@
         <ul class="plan-feats">
           <li>Saisie de notes et calcul automatique des moyennes</li>
           <li>Progression trimestrielle T1 / T2 / T3</li>
-          <li>Mode 100% hors ligne</li>
+          <li>Calcul sans connexion internet</li>
+          <li>Sauvegarde sécurisée sur ton compte</li>
           <li>1 profil élève</li>
         </ul>
         <a href="https://play.google.com/store/apps/details?id=ci.ruds.notevo" class="plan-action plan-action-ghost">Télécharger</a>
@@ -330,7 +354,6 @@
 
     </div>
 
-    <!-- Note annuel -->
     <p class="caption" style="text-align:center; margin-top:16px;">
       Paiement via Google Play · Sans engagement · Annulable à tout moment
     </p>
