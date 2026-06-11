@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════
    NOTEVO · KAMI DESIGN SYSTEM
-   Warm parchment canvas — single brand accent — serif-led hierarchy
+   Warm parchment canvas — single brand accent — Nunito-led UI
    ══════════════════════════════════════════════════════════════ */
 
 /* ── DESIGN TOKENS ─────────────────────────────────────────── */
@@ -21,8 +21,16 @@
   --border-light:   #f0ede4;
 
   /* Typography */
-  --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
-  --sans:  'Inter', system-ui, -apple-system, sans-serif;
+  --serif:   'Newsreader', Georgia, 'Times New Roman', serif;
+  --sans:    'Inter', system-ui, -apple-system, sans-serif;
+  --rounded: 'Nunito', system-ui, sans-serif;
+
+  /* Notebook line texture — same as app */
+  --notebook: repeating-linear-gradient(
+    to bottom,
+    transparent 0px, transparent 27px,
+    rgba(168,158,140,.07) 27px, rgba(168,158,140,.07) 28px
+  );
 
   /* Shadows — no hard shadows, ring + whisper only */
   --shadow-ring:    0 0 0 1px rgba(20,20,19,0.06), 0 1px 4px rgba(20,20,19,0.04);
@@ -35,13 +43,14 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: var(--sans);
+  font-family: var(--rounded);
   background: var(--parchment);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.55;
   font-size: 15px;
+  font-weight: 600;
 }
 
 /* ── LAYOUT ──────────────────────────────────────────────────── */
@@ -125,7 +134,8 @@ body {
 /* ── TYPOGRAPHY SCALE ────────────────────────────────────────── */
 .eyebrow-tag {
   display: inline-block;
-  font-size: 11px; font-weight: 500; letter-spacing: .08em;
+  font-family: var(--rounded);
+  font-size: 11px; font-weight: 800; letter-spacing: .08em;
   text-transform: uppercase; color: var(--brand);
   background: var(--brand-tag); padding: 3px 10px; border-radius: 20px;
 }
@@ -165,12 +175,13 @@ body {
 }
 
 .lede {
+  font-family: var(--sans);
   font-size: 16px; font-weight: 400; color: var(--olive);
   line-height: 1.65; max-width: 560px;
 }
 
-.body-text { font-size: 14px; color: var(--olive); line-height: 1.7; }
-.caption { font-size: 12px; color: var(--mist); line-height: 1.5; }
+.body-text { font-family: var(--sans); font-size: 14px; color: var(--olive); line-height: 1.7; }
+.caption { font-family: var(--sans); font-size: 12px; color: var(--mist); line-height: 1.5; }
 
 /* ── BLOCKQUOTE ──────────────────────────────────────────────── */
 .quote {
@@ -183,7 +194,8 @@ body {
 
 /* ── SECTION BLOCK ───────────────────────────────────────────── */
 .section-label {
-  font-size: 10px; font-weight: 500; text-transform: uppercase;
+  font-family: var(--rounded);
+  font-size: 10px; font-weight: 900; text-transform: uppercase;
   letter-spacing: .12em; color: var(--brand); margin-bottom: 8px;
   display: block;
 }
@@ -214,12 +226,13 @@ body {
 }
 .metric-cell:last-child { border-right: none; }
 .metric-value {
-  font-family: var(--serif); font-size: 30px; font-weight: 500;
+  font-family: var(--rounded); font-size: 28px; font-weight: 900;
   color: var(--near-black); letter-spacing: -0.03em;
   display: block; line-height: 1; margin-bottom: 5px;
 }
 .metric-label {
-  font-size: 10px; font-weight: 500; color: var(--mist);
+  font-family: var(--rounded);
+  font-size: 10px; font-weight: 700; color: var(--mist);
   text-transform: uppercase; letter-spacing: .08em;
 }
 
@@ -293,7 +306,7 @@ tbody td {
 /* ── BUTTONS ─────────────────────────────────────────────────── */
 .btn {
   display: inline-flex; align-items: center; gap: 7px;
-  font-family: var(--sans); font-size: 13px; font-weight: 500;
+  font-family: var(--rounded); font-size: 13px; font-weight: 800;
   padding: 10px 20px; border-radius: 7px; text-decoration: none;
   cursor: pointer; transition: transform .1s, box-shadow .1s;
   border: none;
@@ -314,7 +327,7 @@ tbody td {
 .pricing-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
 .pricing-card {
   border: 1px solid var(--border-cream); border-radius: 12px;
-  padding: 24px 20px; background: white;
+  padding: 24px 20px; background: white; background-image: var(--notebook);
   box-shadow: var(--shadow-ring);
   display: flex; flex-direction: column;
 }
@@ -324,7 +337,8 @@ tbody td {
   border-color: transparent; box-shadow: var(--shadow-float);
 }
 .plan-name {
-  font-size: 10px; font-weight: 500; text-transform: uppercase;
+  font-family: var(--rounded);
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
   letter-spacing: .12em; color: var(--mist); margin-bottom: 14px;
 }
 .tier-premium .plan-name { color: rgba(255,255,255,.4); }
@@ -339,6 +353,7 @@ tbody td {
 .tier-premium .plan-rule { background: rgba(255,255,255,.09); }
 .plan-feats { list-style: none; flex: 1; }
 .plan-feats li {
+  font-family: var(--sans);
   font-size: 13px; color: var(--olive); line-height: 1.5;
   padding: 4px 0 4px 18px; position: relative;
 }
@@ -349,7 +364,7 @@ tbody td {
 }
 .plan-action {
   margin-top: 20px; text-align: center; padding: 10px;
-  border-radius: 7px; font-size: 13px; font-weight: 500;
+  border-radius: 7px; font-family: var(--rounded); font-size: 13px; font-weight: 800;
   text-decoration: none; display: block; transition: transform .1s;
 }
 .plan-action:hover { transform: translateY(-1px); }
@@ -363,7 +378,7 @@ tbody td {
   border: 1px solid var(--border-cream); border-radius: 12px;
   overflow: hidden; box-shadow: var(--shadow-ring);
 }
-.feature-cell { background: white; padding: 26px 24px; position: relative; }
+.feature-cell { background: white; background-image: var(--notebook); padding: 26px 24px; position: relative; }
 .feature-cell::after {
   content: ''; position: absolute;
   top: 0; left: 0; right: 0; height: 2px;
@@ -386,10 +401,10 @@ tbody td {
   padding: 2px 7px; border-radius: 10px; margin-bottom: 8px;
 }
 .feature-cell h3 {
-  font-family: var(--serif); font-size: 15px; font-weight: 500;
+  font-family: var(--rounded); font-size: 15px; font-weight: 800;
   color: var(--near-black); margin-bottom: 7px; letter-spacing: -0.01em;
 }
-.feature-cell p { font-size: 13px; color: var(--olive); line-height: 1.6; }
+.feature-cell p { font-family: var(--sans); font-size: 13px; color: var(--olive); line-height: 1.6; }
 
 /* ── DOC SECTION (legal pages) ───────────────────────────────── */
 .doc-section {
