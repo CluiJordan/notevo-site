@@ -144,19 +144,23 @@
       </h2>
       <div class="data-flow">
         <div class="flow-cell">
-          <span class="flow-icon">📱</span>
-          <div class="flow-title">Gratuit sans compte</div>
-          <div class="flow-sub">Toutes les données restent uniquement sur ton téléphone. Rien n'est envoyé.</div>
+          <span class="flow-icon" style="display:block;margin-bottom:8px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C0461A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto;"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </span>
+          <div class="flow-title">Ton téléphone</div>
+          <div class="flow-sub">Le calcul se fait localement. L'app fonctionne même sans connexion.</div>
         </div>
         <div class="flow-arrow">→</div>
         <div class="flow-cell-dark">
-          <span class="flow-icon">☁️</span>
-          <div class="flow-title flow-title-light">Premium connecté</div>
-          <div class="flow-sub flow-sub-light">Tes notes sont synchronisées avec le cloud sécurisé uniquement si tu te connectes.</div>
+          <span class="flow-icon" style="display:block;margin-bottom:8px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </span>
+          <div class="flow-title flow-title-light">Cloud sécurisé</div>
+          <div class="flow-sub flow-sub-light">Tes notes sont sauvegardées sur ton compte Supabase, accessible uniquement par toi.</div>
         </div>
       </div>
       <div class="highlight-ok">
-        En version gratuite sans connexion Google, <strong>zéro donnée</strong> ne quitte ton téléphone. L'application fonctionne entièrement en local.
+        Un compte est nécessaire pour utiliser Notevo. Tes notes sont <strong>chiffrées et liées à ton identifiant</strong> — personne d'autre ne peut y accéder.
       </div>
     </div>
 
@@ -216,8 +220,8 @@
       <p>Tes données servent exclusivement à faire fonctionner l'application pour toi.</p>
       <ul>
         <li>Calculer et afficher tes moyennes scolaires</li>
-        <li>Synchroniser tes notes entre tes appareils (Premium uniquement)</li>
-        <li>Sauvegarder ta progression dans le cloud (Premium uniquement)</li>
+        <li>Sauvegarder et synchroniser tes notes sur ton compte (tous les plans)</li>
+        <li>Accéder à tes notes depuis n'importe quel appareil connecté</li>
         <li>Améliorer l'application via des statistiques anonymes et agrégées</li>
       </ul>
       <div class="highlight-warn" style="margin-top:18px;">
@@ -247,7 +251,7 @@
               <td>Protégées par le système Android</td>
             </tr>
             <tr>
-              <td>Données cloud (Premium)</td>
+              <td>Données cloud (tous les plans)</td>
               <td>Supabase — infrastructure EU</td>
               <td>Chiffrement AES-256, HTTPS/TLS</td>
             </tr>
@@ -272,7 +276,7 @@
       <div class="providers-grid">
         <div class="provider-card">
           <div class="provider-name">Supabase</div>
-          <div class="provider-role">Base de données et authentification pour les données cloud Premium</div>
+          <div class="provider-role">Base de données et authentification — stockage sécurisé pour tous les utilisateurs</div>
         </div>
         <div class="provider-card">
           <div class="provider-name">Google OAuth</div>
