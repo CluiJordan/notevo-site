@@ -324,14 +324,13 @@ tbody td {
 .btn-outline:hover { border-color: var(--brand); color: var(--brand); }
 
 /* ── PRICING CARDS ───────────────────────────────────────────── */
-.pricing-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 820px; margin: 0 auto; }
 .pricing-card {
   border: 1px solid var(--border-cream); border-radius: 12px;
   padding: 24px 20px; background: white; background-image: var(--notebook);
   box-shadow: var(--shadow-ring);
   display: flex; flex-direction: column;
 }
-.pricing-card.tier-standard { border-color: rgba(192,70,26,.3); }
 .pricing-card.tier-premium {
   background: var(--near-black);
   border-color: transparent; box-shadow: var(--shadow-float);

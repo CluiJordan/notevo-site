@@ -28,14 +28,13 @@
 
     /* Plan comparison */
     .plan-compare {
-      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 20px 0;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 20px 0;
     }
     @media (max-width: 540px) { .plan-compare { grid-template-columns: 1fr; } }
     .plan-compare-card {
       padding: 16px; border-radius: 9px;
       border: 1px solid var(--border-cream); background: white;
     }
-    .plan-compare-card.is-std { border-color: rgba(192,70,26,.3); }
     .plan-compare-card.is-prem {
       background: var(--near-black); border-color: transparent;
     }
@@ -112,7 +111,7 @@
     <div class="doc-header-meta">
       <span class="eyebrow-tag">Légal</span>
       <span class="eyebrow-dot">·</span>
-      <span class="doc-updated">Dernière mise à jour : juin 2026</span>
+      <span class="doc-updated">Dernière mise à jour : juillet 2026</span>
     </div>
     <h1 class="heading-1">Conditions<br/>d'utilisation</h1>
     <div class="doc-intro">
@@ -132,7 +131,7 @@
         Notevo est une application mobile de gestion de notes scolaires destinée aux élèves ivoiriens du collège et du lycée (6ème à Terminale). Elle permet de saisir, calculer et suivre ses moyennes selon les coefficients officiels du système éducatif ivoirien.
       </p>
       <p>
-        Notevo est disponible en version <strong>Gratuite</strong>, <strong>Standard</strong> et <strong>Premium</strong>.
+        Notevo est disponible en version <strong>Gratuite</strong> et <strong>Premium</strong>. À la création du compte, <strong>30 jours d'accès Premium sont offerts</strong> — sans carte bancaire et sans engagement ; à la fin de l'essai, le compte repasse automatiquement en version Gratuite si aucun abonnement n'est souscrit.
       </p>
 
       <div class="plan-compare">
@@ -142,28 +141,22 @@
           <ul class="pcc-list">
             <li>Calcul des moyennes</li>
             <li>Tous les niveaux CI</li>
-            <li>3 trimestres</li>
-            <li>Calcul hors ligne</li>
-            <li>Sauvegarde sur compte</li>
-            <li>1 profil</li>
-          </ul>
-        </div>
-        <div class="plan-compare-card is-std">
-          <div class="pcc-name">Standard</div>
-          <div class="pcc-price">250 F<span style="font-size:14px;color:var(--mist);">/mois</span></div>
-          <ul class="pcc-list">
             <li>Graphiques de progression</li>
-            <li>Simulateur de notes</li>
-            <li>Projection annuelle</li>
+            <li>Partage de progression (image)</li>
+            <li>Calcul hors ligne</li>
+            <li>1 profil</li>
           </ul>
         </div>
         <div class="plan-compare-card is-prem">
           <div class="pcc-name">Premium</div>
           <div class="pcc-price">500 F<span style="font-size:14px;color:rgba(255,255,255,.3);">/mois</span></div>
           <ul class="pcc-list">
+            <li>ou 3 000 F/an (soit 250 F/mois)</li>
+            <li>Simulateur de notes par matière</li>
+            <li>Projection annuelle + mention</li>
+            <li>Planning : rappels de devoirs</li>
+            <li>Bulletin PDF (non officiel)</li>
             <li>Jusqu'à 3 profils</li>
-            <li>Notifications et rappels</li>
-            <li>Accès prioritaire nouveautés</li>
           </ul>
         </div>
       </div>
